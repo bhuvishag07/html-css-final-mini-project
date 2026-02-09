@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* FORCE WHITE BACKGROUND */
+body {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: scroll;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.explore-btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.explore-btn:hover {
+  color: #c760e6;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0.05);
+}
+
+.nav-links a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c760e6;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #e17dbc;
+  width: 0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.hero-btn {
+  background: #5624d0;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  gap: 25px;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.categories a {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.3s, color 0.3s;
+  color: #000;
+}
+
+.categories a:hover {
+  background: #5624d0;
+  color: #fff;
+}
+
+.categories .active {
+  background: #000;
+  color: #fff;
+}
+
+/* COURSE SECTIONS */
+.course-section {
+  padding: 40px;
+}
+
+.course-section h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  color: #000;
+}
+
+/* COURSE ROW */
+.course-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* COURSE CARD */
+.course-card {
+  flex: 1 1 calc(20% - 16px);
+  max-width: calc(20% - 16px);
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.course-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* CARD TEXT */
+.course-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 10px 0 4px;
+}
+
+.course-card p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.course-card span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #5624d0;
+  text-align: center;
+  margin-top: 5px;
+}
+/* ============================= */
+/* TEACH & PLANS PAGE LAYOUT */
+/* ============================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 50px;
+}
+
+/* LOGO */
+
+.page-logo {
+  text-align: center;
+  font-size: 46px;
+  font-weight: bold;
+  color: #5624d0; /* Purple */
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* MAIN CONTENT SECTION */
+
+.page-section {
+  width: 100%;
+  background: #f9f9ff;
+  padding: 35px 40px;
+  border-radius: 14px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* HEADINGS */
+
+.page-section h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.page-section h3 {
+  font-size: 21px;
+  color: #222;
+  margin: 20px 0 10px;
+}
+
+/* PARAGRAPH TEXT */
+
+.page-section p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* LIST */
+
+.page-section ul {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+.page-section ul li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* PLANS SECTION */
+
+.plan-box {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* PLAN CARD */
+
+.plan-card {
+  flex: 1 1 280px;
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+/* PLAN TITLE */
+
+.plan-card h3 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* PLAN TEXT */
+
+.plan-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* PRICE */
+
+.plan-card span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5624d0;
+  display: block;
+  margin: 15px 0;
+}
+
+/* BUTTON */
+
+.plan-card button {
+  background: #5624d0;
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.plan-card button:hover {
+  background: #4319b3;
+}
+/* ============================= */
+/* TEACH & PLANS CLEAN LAYOUT */
+/* ============================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 30px 50px;
+}
+
+/* LOGO */
+
+.page-logo {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #5624d0;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/* MAIN CONTENT */
+
+.page-section {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+/* HEADINGS */
+
+.page-section h2 {
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.page-section h3 {
+  font-size: 22px;
+  color: #222;
+  margin: 18px 0 8px;
+}
+
+/* TEXT */
+
+.page-section p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 14px;
+  max-width: 100%;
+}
+
+/* LIST */
+
+.page-section ul {
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.page-section ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+/* ============================= */
+/* HORIZONTAL PLANS */
+/* ============================= */
+
+.plan-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Rows, not grid */
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* EACH PLAN ROW */
+
+.plan-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+  padding: 18px 10px;
+
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* REMOVE HOVER CARD EFFECT */
+
+.plan-card:hover {
+  transform: none;
+}
+
+/* PLAN LEFT SIDE */
+
+.plan-card h3 {
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+}
+
+.plan-card p {
+  font-size: 15px;
+  color: #555;
+  margin: 5px 0 0;
+}
+
+/* PRICE */
+
+.plan-card span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #5624d0;
+  margin-right: 20px;
+}
+
+/* BUTTON */
+
+.plan-card button {
+  background: #5624d0;
+  color: #fff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.plan-card button:hover {
+  background: #441bb0;
+}
+/* COMMON PAGE LAYOUT */
+
+.page-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 40px;
+}
+
+.page-logo {
+  font-size: 42px;
+  font-weight: bold;
+  color: #5624d0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-section {
+  margin-bottom: 50px;
+}
+
+.page-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.page-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* CENTER BUTTON */
+
+.center-btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* PLANS LAYOUT */
+
+.plans-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.plan-card {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.plan-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.plan-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.plan-card span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5624d0;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.plan-card button {
+  background: #5624d0;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.plan-card button:hover {
+  opacity: 0.9;
+}

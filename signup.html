@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign Up | LearnHub</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d1f27, #2c2f4a);
+}
+
+.signup-box {
+  background: #fff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box label {
+  font-size: 14px;
+  color: #555;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #6c63ff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #6c63ff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.extra {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.extra a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<form class="signup-box">
+  <div class="logo">LearnHub</div>
+  <h2>Create Account</h2>
+
+  <div class="input-box">
+    <label>Full Name</label>
+    <input type="text" required placeholder="Enter full name">
+  </div>
+
+  <div class="input-box">
+    <label>Email</label>
+    <input type="email" required placeholder="Enter email">
+  </div>
+
+  <div class="input-box">
+    <label>Password</label>
+    <input type="password" required minlength="6" placeholder="Create password">
+  </div>
+
+  <div class="input-box">
+    <label>Confirm Password</label>
+    <input type="password" required minlength="6" placeholder="Confirm password">
+  </div>
+
+  <button type="submit">Sign Up</button>
+
+  <div class="extra">
+    <p>Already have an account?</p>
+    <a href="login.html">Login</a>
+  </div>
+</form>
+
+</body>
+</html>
